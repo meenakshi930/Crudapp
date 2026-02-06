@@ -48,6 +48,9 @@ def update(sno):
         return redirect("/")
     employee = Employee.query.filter_by(sno=sno).first()
     return render_template("update.html", employee=employee)
+@app.route("/contact")
+def contact():
+   return render_template("contact.html")
 
 if __name__ == '__main__':
    app.run(debug=True)
